@@ -28,7 +28,9 @@ type CardProps = {
   suit: Suit
 }
 
-const Ace = ({ suit }: CardProps) => <div>{suitToSymbol(suit)}</div>
+const Ace = ({ suit }: CardProps) => (
+  <div className={styles.large}>{suitToSymbol(suit)}</div>
+)
 
 const Two = ({ suit }: CardProps) => (
   <>
@@ -174,11 +176,17 @@ const Ten = ({ suit }: CardProps) => (
   </>
 )
 
-const Jack = ({ suit }: CardProps) => <div>{suitToSymbol(suit)}</div>
+const Jack = ({ suit }: CardProps) => (
+  <div className={styles.large}>{suitToSymbol(suit)}</div>
+)
 
-const Queen = ({ suit }: CardProps) => <div>{suitToSymbol(suit)}</div>
+const Queen = ({ suit }: CardProps) => (
+  <div className={styles.large}>{suitToSymbol(suit)}</div>
+)
 
-const King = ({ suit }: CardProps) => <div>{suitToSymbol(suit)}</div>
+const King = ({ suit }: CardProps) => (
+  <div className={styles.large}>{suitToSymbol(suit)}</div>
+)
 
 type Cards = { [key: string]: any }
 

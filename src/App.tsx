@@ -6,8 +6,8 @@ export default () => {
   return (
     <div className={styles.app}>
       <div className={styles.deck}>
-        {['A', '2', '3', '4', '5', '6', '7', '8', '9', '10'].map(
-          (symbol, index) => (
+        {['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'].map(
+          symbol => (
             <Card key={symbol} label="Hihi Xd" number={symbol} suit="clubs" />
           )
         )}

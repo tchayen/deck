@@ -44,13 +44,13 @@ $margin: 20px;
 }
 
 .front {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
 }
 
 .back {
   z-index: 2;
   background-color: #ffd000;
-  transform: rotateY(0deg);
+  transform: rotateY(180deg);
 }
 
 .red {
@@ -117,4 +117,12 @@ $margin: 20px;
 
 .invisible {
   visibility: hidden;
+}
+
+.large {
+  font-size: 100px;
+}
+
+.roboto {
+  font-family: Roboto;
 }
