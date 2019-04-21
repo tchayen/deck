@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: #aaa;
+}
+
+.deck {
+  display: flex;
+  flex-wrap: wrap;
+  // transform: scale(0.4);
+}

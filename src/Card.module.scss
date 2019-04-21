@@ -1,0 +1,120 @@
+$width: 225px;
+$height: 350px;
+$margin: 20px;
+
+.card {
+  width: $width;
+  height: $height;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+  margin: 20px;
+
+  &:hover {
+    .rotation {
+      transform: translateY($height) rotateX(180deg);
+    }
+  }
+}
+
+.rotation {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.side {
+  border-radius: 16px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+  background: #fff;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  z-index: 2;
+  background-color: #ffd000;
+  transform: rotateY(0deg);
+}
+
+.red {
+  color: #ee1111;
+}
+
+.inner {
+  width: $width - 100px;
+  height: $height - 110px;
+  left: 50px;
+  top: 55px;
+  font-size: 41px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  text-align: center;
+  font-family: 'icomoon';
+}
+
+.half {
+  flex: 1;
+}
+
+.name {
+  height: $height / 2;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0 0 12px;
+  width: 45px;
+  align-items: center;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.suitUnderNumber {
+  margin-top: 5px;
+  font-family: 'icomoon';
+  font-size: 24px;
+}
+
+.reverse {
+  transform: rotateZ(180deg);
+}
+
+.column {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.invisible {
+  visibility: hidden;
+}
